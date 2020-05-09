@@ -1,0 +1,4 @@
+edition = "2018"
+hard_tabs = true
+newline_style = "Windows"
+use_try_shorthand = true
