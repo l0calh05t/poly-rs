@@ -1,5 +1,8 @@
 # Poly – Generic dense polynomials
 
+[![crates.io](https://img.shields.io/crates/v/poly)](https://crates.io/crates/poly)
+[![docs.rs](https://docs.rs/poly/badge.svg)](https://docs.rs/poly)
+
 This crate implements type-generic dense polynomial arithmetic.
 
 ## Usage
