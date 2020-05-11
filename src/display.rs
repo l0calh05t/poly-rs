@@ -37,6 +37,10 @@ fn to_superscript(k: &str) -> Result<String, Error> {
 
 impl<'a, 'b, T: Display + One + Zero + PartialEq> Display for DisplayPolynomial<'a, 'b, T> {
 	fn fmt(&self, f: &mut Formatter) -> std::fmt::Result {
+		if self.polynomial.order() == 0 {
+			write!(f, "{}", self.polynomial.rev_coeffs[0])?;
+			return Ok(())
+		}
 		let mut first = true;
 		for (k, v) in self.polynomial.rev_coeffs.iter().enumerate().rev() {
 			if v.is_zero() {
